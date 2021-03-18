@@ -25,5 +25,6 @@
 	public Flux<ServerSentEvent<String>> sse() { // ServerSentEvent<String>
 		 // 쉽게 말해서 SSE는 어떤 하나의 Sink를 구독하고 있는 코드.
 		return sink.asFlux().map(e -> ServerSentEvent.builder(e).build());
+	}
 	
 ```
